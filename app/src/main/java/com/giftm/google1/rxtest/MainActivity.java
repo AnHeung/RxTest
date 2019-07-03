@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Data data = new Data();
+//        Data data = new Data();
 
         LogThread.Log("메인 스레등");
 //
@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .subscribe(testdata->{
                         if(testdata < 0){
-                            Log.d("테스트" , data+"");
+                            LogThread.Log("테스트 : " +  testdata+"");
                         }
-                    }, throwable -> Log.d("오류값 : " , throwable.getMessage())));
+                    }, throwable -> LogThread.Log("오류값 : " + throwable.getMessage())));
 
 
 //        disposable.add(
